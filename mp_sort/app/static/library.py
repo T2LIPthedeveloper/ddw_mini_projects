@@ -42,8 +42,7 @@ def sortnumber1():
 		- call your sort function, either bubble sort or insertion sort
 		- create a string of the sorted numbers and store it in array_str
 	'''
-	array_to_sort = None 
-	document.getElementById("generate").innerHTML = array_to_sort
+	array_to_sort = document.getElementById("generate").innerHTML
 	res = [int(i) for i in array_to_sort.split(',') if i.isdigit()]
 	swapped = False
 	for i in range(len(res) - 1):

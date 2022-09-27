@@ -49,7 +49,7 @@ def sortnumber1():
 		if not swapped:
 			return
 	sorted_array = ",".join(str(x) for x in res)
-	
+
 
  
 
@@ -69,6 +69,7 @@ def sortnumber2():
 			a list of numbers
 		- call your sort function, either bubble sort or insertion sort
 		- create a string of the sorted numbers and store it in array_str
+
 	'''
 	# The following line get the value of the text input called "numbers"
 	value = document.getElementsByName("numbers")[0].value
@@ -79,11 +80,21 @@ def sortnumber2():
 		return
 
 	# Your code should start from here
+	res = [int(i) for i in value.split(',') if i.isdigit()]
+	swapped = False
+	for i in range(len(res) - 1):
+		for j in range(0, len(res) - i - 1):
+			if res[j] > res[j + 1]:
+				res[j], res[j + 1] = res[j + 1], res[j]
+				swapped = True
+		if not swapped:
+			return
+
 	# store the final string to the variable array_str
 	pass
 
 	array_str = None
-
+	array_str = ",".join(str(x) for x in res)
 	document.getElementById("sorted").innerHTML = array_str
 
 

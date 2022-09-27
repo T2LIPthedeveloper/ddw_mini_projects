@@ -2,7 +2,12 @@ from org.transcrypt.stubs.browser import *
 import random
 
 def gen_random_int(number, seed):
-	
+
+	list = [x for x in range(number)]
+	random.seed(seed)
+	random.shuffle(list)
+	return list
+
 	pass
 
 def generate():
@@ -14,13 +19,13 @@ def generate():
 	# store it to the variable array :)
 	pass
 
-	array = None
+	array = gen_random_int(number, seed)
 	# convert the items into one single string 
 	# the number should be separated by a comma
 	# and a full stop should end the string.
 	pass
 
-	array_str = None
+	array_str = ",".join(str(i) for i in array)
 
 	# This line is to placed the string into the HTML
 	# under div section with the id called "generate"	

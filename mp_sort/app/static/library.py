@@ -53,14 +53,13 @@ def sortnumber1():
 				swapped = True
 		if not swapped:
 			return
-	sorted_array = ",".join(str(x) for x in res)
 
 
  
 
 	pass
 
-	array_str = None
+	array_str = ",".join(str(x) for x in res)
 	
 	document.getElementById("sorted").innerHTML = array_str
 

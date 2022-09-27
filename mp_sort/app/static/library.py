@@ -9,7 +9,7 @@ def generate():
 	seed = 200
 
 	# call gen_random_int() with the given number and seed
-	# store it to the variable array
+	# store it to the variable array :)
 	pass
 
 	array = None

@@ -2,6 +2,7 @@ from org.transcrypt.stubs.browser import *
 import random
 
 def gen_random_int(number, seed):
+	
 	pass
 
 def generate():
@@ -9,6 +10,7 @@ def generate():
 	seed = 200
 
 	# call gen_random_int() with the given number and seed
+	gen_random_int(number, seed)
 	# store it to the variable array :)
 	pass
 
@@ -35,6 +37,22 @@ def sortnumber1():
 		- call your sort function, either bubble sort or insertion sort
 		- create a string of the sorted numbers and store it in array_str
 	'''
+	array_to_sort = None 
+	document.getElementById("generate").innerHTML = array_to_sort
+	res = [int(i) for i in array_to_sort.split(',') if i.isdigit()]
+	swapped = False
+	for i in range(len(res) - 1):
+		for j in range(0, len(res) - i - 1):
+			if res[j] > res[j + 1]:
+				res[j], res[j + 1] = res[j + 1], res[j]
+				swapped = True
+		if not swapped:
+			return
+	sorted_array = ",".join(str(x) for x in res)
+	
+
+ 
+
 	pass
 
 	array_str = None

@@ -83,16 +83,11 @@ def sortnumber2():
 		return
 
 	# Your code should start from here
-	res = [int(i) for i in value.split(',') if i.isdigit()]
-	swapped = False
+	res = [int(i) for i in value.split(',')]
 	for i in range(len(res) - 1):
 		for j in range(0, len(res) - i - 1):
 			if res[j] > res[j + 1]:
 				res[j], res[j + 1] = res[j + 1], res[j]
-				swapped = True
-		if not swapped:
-			return
-
 	# store the final string to the variable array_str
 	pass
 
